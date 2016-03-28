@@ -1,0 +1,34 @@
+{
+  "name": "data-statistics",
+  "version": "1.0.0",
+  "description": "Compute statistics on streaming data object",
+  "main": "data-statistics.js",
+  "scripts": {
+    "test": "node ./test/main.js",
+    "compile": "babel -d ./lib ./src",
+    "prepublish": "npm run compile",
+    "dev": "babel --watch -d ./lib ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EkinAthor/data-statistics.git"
+  },
+  "keywords": [
+    "data_profiling",
+    "profiling",
+    "statistics",
+    "streaming",
+    "data"
+  ],
+  "author": "Marek Ovcacek <marek.ovcacek@gmail.com> (https://github.com/EkinAthor)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EkinAthor/data-statistics/issues"
+  },
+  "homepage": "https://github.com/EkinAthor/data-statistics#readme",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-polyfill": "^6.3.14",
+    "chai": "^3.5.0"
+  }
+}
