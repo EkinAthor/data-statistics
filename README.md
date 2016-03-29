@@ -12,31 +12,36 @@ Examples:
 
 ## Sample Usage
 Basic usage of the data-statistic package consists of:
- 1. initializing the object with default options (only required option is array with the same number of elements as there are elements in the data row)
- ```javascript
+
+* initializing the object with default options (only required option is array with the same number of elements as there are elements in the data row)
+
+```javascript
  var stats = require("data-statistics");
  stats.DataStatistics({elements: ['name','number']});
- ```
+```
  *hint: you can use data header for initialization*
 
- 2. feeding data into the object one line at a time (row has to have the same number of elements as declared in initialization)
- ```javascript 
+* feeding data into the object one line at a time (row has to have the same number of elements as declared in initialization)
+
+```javascript 
  var row = [{"value": "John-123"}, {"value": 11}];
  DS.updateStatistics(row);
  var row = [{"value": "Darcy"}, {"value": 11}];
  DS.updateStatistics(row);
- ```
+```
  Data is always in the format mentioned above. Array of the object with at least "value" attribute. Number of objects and order of objects must correspond to the number of objects set upon the initialization.
- 3. Accessing the statistics any time by calling the getter methods
-   ```javascript
+
+* Accessing the statistics any time by calling the getter methods
+
+```javascript
     DS.getTopFrequencyObject();
     
     [
         {freq: [ { label: "John-123", value: 1 }, { label: "Darcy", value: 1 } ]},
         {freq: [ { label: "11", value: 2} ]}
     ]
-    ```
-    You can access this object any time, from any other process.
+```
+   You can access this object any time, from any other process.
 
 
 ## Core functionality
